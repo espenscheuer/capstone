@@ -1,0 +1,38 @@
+html{
+  background: #E1DFDD
+}
+
+body {
+  font-family: Algerian;
+  background: #E1DFDD
+}
+
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+
+
+.logo {
+  height: 32px;
+  color:white;
+  margin: 16px;
+}
+
+.site-layout-sub-header-background {
+  background: #E1DFDD)
+}
+
+.site-layout-background {
+  background: #fff;
+}
+  [data-theme="dark"] .site-layout-sub-header-background {
+    background: #141414;
+  }

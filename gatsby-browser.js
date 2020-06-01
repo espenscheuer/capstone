@@ -5,3 +5,6 @@
  */
 
 // You can delete this file if you're not using it
+require("./src/styles/global.css")
+require("antd/dist/antd.css");
+
