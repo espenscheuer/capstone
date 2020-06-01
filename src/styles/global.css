@@ -7,22 +7,18 @@ body {
   background: #E1DFDD
 }
 
-.ant-carousel .slick-slide {
-  text-align: center;
-  height: 160px;
-  line-height: 160px;
-  background: #364d79;
-  overflow: hidden;
+.control-next:before {
+  color: black
+	
+}
+[dir='rtl'] .control-next:before {
+
+	color:black
 }
 
-.ant-carousel .slick-slide h3 {
-  color: #fff;
-}
-
-
-.logo {
-  height: 32px;
-  color:white;
+ .logo {
+  height: 89px;
+  background: rgba(255, 255, 255, 0.2);
   margin: 16px;
 }
 

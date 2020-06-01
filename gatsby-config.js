@@ -17,9 +17,9 @@ module.exports = {
       options: {
         javascriptEnabled: true,
         modifyVars: {
-          "primary-color": "#6264A7",
+          "primary-color": "#5458AF",
           "heading-color": "#252423",
-          "font-size-base": "12px",
+          "font-size-base": "14px",
           "text-color":"#252423",
           "font-family": "Segoe UI", 
         }
@@ -32,6 +32,21 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `team`,
+        path: `${__dirname}/src/images/team/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `overview`,
+        path: `${__dirname}/src/images/overview/`,
+      },
+    },
+    
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

@@ -1,16 +1,15 @@
-import React, { useState } from "react"
+import React from "react"
 import { Typography } from "antd"
 
 function Process() {
-  const { Title, Text } = Typography
+  const { Title } = Typography
 
   return (
     <div
       className="site-layout-background"
-      style={{ padding: 30, minHeight: 360 }}
+      style={{ padding: 25, minHeight: 800 }}
     >
-      <Title level={3}>Process</Title>
-      <br />
+      <Title level={2}>Process</Title>
     </div>
   )
 }
