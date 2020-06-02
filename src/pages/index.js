@@ -41,7 +41,7 @@ function IndexPage({ data }) {
         }}
       >
         <div className="logo" >
-          {data.overview.edges && <Img fluid={data.overview.edges[3].node.childImageSharp.fluid} alt="" />}
+          {data.overview.edges && <Img fluid={data.overview.edges[2].node.childImageSharp.fluid} alt="" />}
         </div>
         <Menu
           style={{ width: 256 }}
