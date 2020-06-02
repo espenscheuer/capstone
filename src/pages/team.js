@@ -18,11 +18,11 @@ function Team({ images }) {
       <Title level={2}>Team</Title>
       <Row gutter={[40, 15]} justify="space-between">
         <Col flex="auto" s={{ span: 24 }} m={{ span: 12 }} xl={{ span: 6 }}>
-          <Img
+          {images && <Img
             style={{ borderRadius: 3 }}
             fluid={images[3].node.childImageSharp.fluid}
             alt=""
-          />
+          />}
           <div style={nameStyle}>
             <a href="https://www.linkedin.com/in/collintran/" style={textStyle}>
               Collin Tran - UX Design
@@ -30,11 +30,11 @@ function Team({ images }) {
           </div>
         </Col>
         <Col flex="auto" s={{ span: 24 }} m={{ span: 12 }} xl={{ span: 6 }}>
-          <Img
+          {images && <Img
             style={{ borderRadius: 3 }}
             fluid={images[1].node.childImageSharp.fluid}
             alt=""
-          />
+          />}
           <div style={nameStyle}>
             <a
               href="https://www.linkedin.com/in/espen-scheuer/"
@@ -45,11 +45,11 @@ function Team({ images }) {
           </div>
         </Col>
         <Col flex="auto" s={{ span: 24 }} m={{ span: 12 }} xl={{ span: 6 }}>
-          <Img
+          {images && <Img
             style={{ borderRadius: 3 }}
             fluid={images[0].node.childImageSharp.fluid}
             alt=""
-          />
+          />}
           <div style={nameStyle}>
             <a
               href="https://www.linkedin.com/in/isabellearmstrong/"
@@ -60,11 +60,11 @@ function Team({ images }) {
           </div>
         </Col>
         <Col flex="auto" s={{ span: 24 }} m={{ span: 12 }} xl={{ span: 6 }}>
-          <Img
+          {images && <Img
             style={{ borderRadius: 3 }}
             fluid={images[2].node.childImageSharp.fluid}
             alt=""
-          />
+          />}
           <div style={nameStyle}>
             <a
               href="https://www.linkedin.com/in/olivia-oplinger/"

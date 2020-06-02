@@ -5,9 +5,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loa
 import Img from "gatsby-image"
 import "../styles/global.css" // requires a loader
 
-function Overview({ updatePage, images }) {
+function Overview({ images }) {
   const { Title } = Typography
-  console.log(images)
   return (
     <div
       className="site-layout-background"
@@ -44,15 +43,16 @@ function Overview({ updatePage, images }) {
               showIndicators={true}
               dynamicHeight={true}
               showStatus={true}
+              showThumbs={false}
             >
               <div>
-                <Img fluid={images[0].node.childImageSharp.fluid} alt="" />
+                {images && <Img fluid={images[0].node.childImageSharp.fluid} alt="" />}
               </div>
               <div>
-                <Img fluid={images[2].node.childImageSharp.fluid} alt="" />
+                {images && <Img fluid={images[2].node.childImageSharp.fluid} alt="" />}
               </div>
               <div>
-                <Img fluid={images[1].node.childImageSharp.fluid} alt="" />
+                {images && <Img fluid={images[1].node.childImageSharp.fluid} alt="" />}
               </div>
             </Carousel>
           </Col>

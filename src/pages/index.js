@@ -26,8 +26,6 @@ function IndexPage({ data }) {
     "3": <Deliverable />,
     "4": <Team images = {data.team.edges}/>,
   }
-  console.log(data.team.edges)
-  console.log(data.overview.edges)
 
   return (
     <Layout>
@@ -43,7 +41,7 @@ function IndexPage({ data }) {
         }}
       >
         <div className="logo" >
-          <Img fluid={data.overview.edges[3].node.childImageSharp.fluid} alt="" />
+          {data.overview.edges && <Img fluid={data.overview.edges[3].node.childImageSharp.fluid} alt="" />}
         </div>
         <Menu
           style={{ width: 256 }}
