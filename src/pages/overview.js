@@ -52,7 +52,7 @@ function Overview({ images }) {
                 {images && <Img fluid={images[3].node.childImageSharp.fluid} alt="" />}
               </div>
               <div>
-                {images && <Img fluid={images[1].node.childImageSharp.fluid} alt="" />}
+                {images && <Img fluid={images[2].node.childImageSharp.fluid} alt="" />}
               </div>
             </Carousel>
           </Col>

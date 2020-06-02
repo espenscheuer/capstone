@@ -56,7 +56,7 @@ function IndexPage({ data }) {
           <div className="logo">
             {data.overview.edges && (
               <Img
-                fluid={data.overview.edges[2].node.childImageSharp.fluid}
+                fluid={data.overview.edges[1].node.childImageSharp.fluid}
                 alt=""
               />
             )}
