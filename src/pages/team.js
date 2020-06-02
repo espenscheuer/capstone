@@ -85,8 +85,8 @@ function Team({ images }) {
         with us on Linkedin by clicking any of our names.
       </p>
       <p>
-        <b>Collin</b> deeply enjoys diving into new projects and working on
-        cars. On this project he worked heavily on the design system, and
+        <b>Collin</b> deeply enjoys diving into new projects and designing for
+        scale. On this project he worked heavily on the design system, and
         embedded shopify controls.
       </p>
       <p>
