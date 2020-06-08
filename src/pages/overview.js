@@ -8,128 +8,80 @@ import "../styles/global.css" // requires a loader
 function Overview({ images }) {
   const { Title } = Typography
   return (
-    <div
-      className="site-layout-background"
-      style={{ paddingTop: 35, paddingBottom: 35 }}
-    >
-      <Row>
-        <Col xs={{ span: 0 }} lg={{ span: 1 }} />
-        <Col xs={{ span: 24 }} lg={{ span: 22 }}>
-          <Title level={2}>Overview</Title>
-          <p>
-            Our project sponsor was Microsoft Teams. While Teams has
-            traditionally only allowed for internal communication, we worked on
-            an extension that would allow it to be used for customer service.
-            You can see some images of our deliverables in the carousel below,
-            or learn more by navigating using the sidebar.
-          </p>
-          <></>
-          <p>
-            <b>Process</b> describes in depth each step of our project
-          </p>
-          <p>
-            <b>Deliverable</b> skips straight to the final designs we created
-          </p>
-          <p>
-            <b>Team</b> has a little bit about us
-          </p>
-          <>
-            <div>
-              <br />
-            </div>
-            <Row>
-              <Col span={3}>
-                <br />
-              </Col>
-              <Col span={18}>
-                <Carousel
-                  showArrows={true}
-                  showIndicators={true}
-                  dynamicHeight={true}
-                  showStatus={true}
-                  showThumbs={false}
-                >
-                  <div>
-                    {images && (
-                      <Img
-                        fluid={
-                          images.find(
-                            element =>
-                              element.node.childImageSharp.fluid
-                                .originalName === "sketch.png"
-                          ).node.childImageSharp.fluid
-                        }
-                        alt=""
-                      />
-                    )}
-                  </div>
-                  <div>
-                    {images && (
-                      <Img
-                        fluid={
-                          images.find(
-                            element =>
-                              element.node.childImageSharp.fluid
-                                .originalName === "wireframe.png"
-                          ).node.childImageSharp.fluid
-                        }
-                        alt=""
-                      />
-                    )}
-                  </div>
-                  <div>
-                    {images && (
-                      <Img
-                        fluid={
-                          images.find(
-                            element =>
-                              element.node.childImageSharp.fluid
-                                .originalName === "medium.png"
-                          ).node.childImageSharp.fluid
-                        }
-                        alt=""
-                      />
-                    )}
-                  </div>
-                  <div>
-                    {images && (
-                      <Img
-                        fluid={
-                          images.find(
-                            element =>
-                              element.node.childImageSharp.fluid
-                                .originalName === "high.png"
-                          ).node.childImageSharp.fluid
-                        }
-                        alt=""
-                      />
-                    )}
-                  </div>
-                  <div>
-                    {images && (
-                      <Img
-                        fluid={
-                          images.find(
-                            element =>
-                              element.node.childImageSharp.fluid
-                                .originalName === "final.png"
-                          ).node.childImageSharp.fluid
-                        }
-                        alt=""
-                      />
-                    )}
-                  </div>
-                </Carousel>
-              </Col>
-              <Col span={3}>
-                <br />
-              </Col>
-            </Row>
-          </>
+    <>
+      {images && (
+        <Img
+          fluid={
+            images.find(
+              element =>
+                element.node.childImageSharp.fluid.originalName === "hero.png"
+            ).node.childImageSharp.fluid
+          }
+          alt=""
+        />
+      )}
+      <div
+        className="site-layout-background"
+        style={{ paddingTop: 35, paddingBottom: 35 }}
+      >
+        <Row>
           <Col xs={{ span: 0 }} lg={{ span: 1 }} />
-        </Col>
-      </Row>
-    </div>
+          <Col xs={{ span: 24 }} lg={{ span: 22 }}>
+            <Title level={2}>Overview</Title>
+            <p>
+              We partnered with Microsoft Teams to support small and medium
+              businesses, helping them build long-lasting relationships with
+              their customers and communicate within their organization, in one,
+              central place. Throughout our design process, we interviewed
+              multiple e-commerce stores to understand their existing with
+              struggles managing customer inquiries, and how we might build upon
+              Microsoft Teams’ existing tools to simplify their workflows. Our
+              solution combines a request ticketing system, an internal
+              workspace communication tool, and a customer-facing chatbot, into
+              one Teams app.
+            </p>
+            <p>
+              Our chatbot handles basic work and information gathering, and
+              passes that information to customer service agents inside of their
+              Teams channels, so they can work most efficiently and provide the
+              best customer service possible. As customer tickets populate
+              inside an agent’s Teams workspace, they can share, edit, and
+              escalate tickets to management, without ever having to leave a
+              conversation.
+            </p>
+            <></>
+            <>
+              <div>
+                <br />
+              </div>
+              <Row>
+                <Col span={3}>
+                  <br />
+                </Col>
+                <Col span={18}>
+                  {images && (
+                    <Img
+                      fluid={
+                        images.find(
+                          element =>
+                            element.node.childImageSharp.fluid.originalName ===
+                            "process.png"
+                        ).node.childImageSharp.fluid
+                      }
+                      alt=""
+                    />
+                  )}
+                </Col>
+                <Col span={3}>
+                  <br />
+                </Col>
+              </Row>
+            </>
+            <Col xs={{ span: 0 }} lg={{ span: 1 }} />
+          </Col>
+        </Row>
+      </div>
+    </>
   )
 }
 

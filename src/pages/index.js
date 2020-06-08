@@ -109,7 +109,7 @@ function IndexPage({ data }) {
         <Layout>
           <Content style={{ margin: "24px 16px 0" }}>{pages[page]}</Content>
           <Footer style={{ textAlign: "center" }}>
-            HCDE + Microsoft Teams
+            Built from scratch in React.
           </Footer>
         </Layout>
       </Layout>
