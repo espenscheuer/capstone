@@ -28,7 +28,7 @@ function IndexPage({ data }) {
 
   const pages = {
     "1": <Overview updatePage={setPage} images={data.overview.edges} />,
-    "2": <Process />,
+    "2": <Process images={data.process.edges} />,
     "3": <Deliverable />,
     "4": <Team images={data.team.edges} />,
   }
@@ -56,7 +56,13 @@ function IndexPage({ data }) {
           <div className="logo">
             {data.overview.edges && (
               <Img
-                fluid={data.overview.edges[1].node.childImageSharp.fluid}
+              fluid={
+                data.overview.edges.find(
+                  element =>
+                    element.node.childImageSharp.fluid
+                      .originalName === "logo.png"
+                ).node.childImageSharp.fluid
+              }
                 alt=""
               />
             )}
@@ -123,6 +129,24 @@ export const query = graphql`
         node {
           childImageSharp {
             fluid {
+              originalName
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+    process: allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(jpeg)|(png)/" }
+        relativeDirectory: { eq: "process" }
+      }
+    ) {
+      edges {
+        node {
+          childImageSharp {
+            fluid {
+              originalName
               ...GatsbyImageSharpFluid
             }
           }
@@ -139,6 +163,7 @@ export const query = graphql`
         node {
           childImageSharp {
             fluid {
+              originalName
               ...GatsbyImageSharpFluid
             }
           }
