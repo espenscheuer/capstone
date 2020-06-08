@@ -80,13 +80,13 @@ function Overview({ images }) {
                   <div>
                     {images && (
                       <Img
-                      fluid={
-                        images.find(
-                          element =>
-                            element.node.childImageSharp.fluid
-                              .originalName === "medium.png"
-                        ).node.childImageSharp.fluid
-                      }
+                        fluid={
+                          images.find(
+                            element =>
+                              element.node.childImageSharp.fluid
+                                .originalName === "medium.png"
+                          ).node.childImageSharp.fluid
+                        }
                         alt=""
                       />
                     )}
