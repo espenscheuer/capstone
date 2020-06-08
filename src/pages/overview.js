@@ -7,12 +7,6 @@ import "../styles/global.css" // requires a loader
 
 function Overview({ images }) {
   const { Title } = Typography
-  console.log(
-    images.find(
-      element =>
-        element.node.childImageSharp.fluid.originalName === "sketch.png"
-    )
-  )
   return (
     <div
       className="site-layout-background"
@@ -86,13 +80,6 @@ function Overview({ images }) {
                   <div>
                     {images && (
                       <Img
-                        fluid={
-                          images.find(
-                            element =>
-                              element.node.childImageSharp.fluid
-                                .originalName === "medium.png"
-                          ).node.childImageSharp.fluid
-                        }
                         alt=""
                       />
                     )}
