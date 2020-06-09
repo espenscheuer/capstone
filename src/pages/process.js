@@ -26,7 +26,6 @@ function Process({ images }) {
         <Row>
           <Col xs={{ span: 1 }} lg={{ span: 1 }} />
           <Col xs={{ span: 22 }} lg={{ span: 22 }}>
-            <Title level={2}>Process</Title>
             <p>
               Our work on this project can be broken down into four phases:
               Research, Synthesis, Ideation, and Iteration. Our work took place
